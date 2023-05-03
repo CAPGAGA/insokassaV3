@@ -1,0 +1,54 @@
+{% load static %}
+<body>
+  <div class="page-wrapper">
+    <div class="main-container">
+      <div class="sidebar">
+        <h2 class="elem-title">Категории</h2>
+        <ul class="category-list" id="category-list">
+        </ul>
+      </div>
+      <div class="main-catalog" id="catalog">
+        <h2 class="elem-title">Сувенирка</h2>
+        <div class="display-grid" id="main-catalog">
+        </div>
+      </div>
+      <div class="basket">
+        <h2 class="elem-title">Расчеты</h2>
+        <div class="product_window" id="product_window">
+<!--          <div class="product">-->
+<!--            <p class="name">-->
+<!--              Тест x 1-->
+<!--            </p>-->
+<!--            <button class="product-button add">-->
+<!--              <img class="button-icon" src="{% static 'icons/plus.svg' %}">-->
+<!--            </button>-->
+<!--            <button class="product-button remove">-->
+<!--              <img class="button-icon" src="{% static 'icons/minus.svg' %}">-->
+<!--            </button>-->
+<!--          </div>-->
+        </div>
+        <p class="total_price" id="final_price"></p>
+        <div class="checkbox-wrapper">
+          <label for="client-check">Для своих</label>
+          <input type="checkbox" id="client-check">
+        </div>
+        <input class="income" id="income" disabled>
+        <div class="num-pad">
+          <input type="button" value="1" class="num-button">
+          <input type="button" value="2" class="num-button">
+          <input type="button" value="3" class="num-button">
+          <input type="button" value="4" class="num-button">
+          <input type="button" value="5" class="num-button">
+          <input type="button" value="6" class="num-button">
+          <input type="button" value="7" class="num-button">
+          <input type="button" value="8" class="num-button">
+          <input type="button" value="9" class="num-button">
+          <input type="button" value="C" class="num-button">
+          <input type="button" value="0" class="num-button">
+          <input type="button" value="DEL" class="num-button">
+        </div>
+        <button class="sell" id="sell">Продажа</button>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,94 @@
+.basket{
+    width: 100px;
+    background: var(--inso-white);
+    flex: 2;
+    position: sticky;
+}
+.product{
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px dashed var(--inso-light-blue);
+    padding-bottom: 3px;
+    font-size: 15px;
+}
+
+.name{
+    display: inline-block;
+    flex: 10;
+    margin: 5px 0px 5px 0px;
+}
+
+.add, .remove{
+    display: inline-block;
+    background: var(--inso-white);
+    cursor: pointer;
+    flex: 1;
+    border: 1px solid var(--inso-black);
+    border-radius: 10px;
+}
+
+.add:hover{
+    background-color: var(--inso-green);
+}
+
+.remove:hover{
+    background-color: red;
+}
+
+.button-icon{
+    width:14px;
+    transform: translate(0, 15%);
+}
+
+.total_price{
+    text-align: center;
+    font-size: x-large;
+}
+
+.num-pad{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.num-button{
+    background-color: var(--inso-white);
+    border: 1px solid var(--inso-dark-blue);
+    cursor: pointer;
+    aspect-ratio: 1/0.5;
+}
+
+.num-button:hover{
+    background-color: var(--inso-light-blue);
+}
+
+.income{
+    display: block;
+    width: 90%;
+    margin: 0% 0% 5% 2.5%;
+    height: 20px;
+    background: initial;
+    color: initial;
+    border-color: initial;
+    border: 1px solid var(--inso-black);
+}
+
+.sell{
+    width: 100%;
+    border: 1px solid var(--inso-light-blue);
+    background: var(--inso-white);
+    height: 40px;
+}
+
+.sell:hover{
+    background: var(--inso-green);
+}
+
+#client-check{
+    width:50%;
+}
+
+.checkbox-wrapper{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 4%;
+}

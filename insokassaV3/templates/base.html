@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>InsoKassaV3</title>
+  <link rel="stylesheet" href="{% static 'css/sidebar.css'%}">
+  <link rel="stylesheet" href="{% static 'css/body.css'%}">
+  <link rel="stylesheet" href="{% static 'css/card.css'%}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+  <link rel="stylesheet" href="{% static 'css/basket.css'%}">
+</head>
+<body>
+<nav class="navbar">
+  <div class="left-info-group">
+
+  </div>
+  <div class="right-control-panel">
+    <a class="control-button" href="{% url 'inventory' %}">
+      Инвентарь
+    </a>
+    <a class="control-button">
+      Инкассация
+    </a>
+    <a class="control-button">
+      Прочее
+    </a>
+  </div>
+</nav>
+{% block content %}
+  {% include 'index.html' %}
+{% endblock %}
+
+</body>
+  <script src="{% static 'js/jquery-3.6.1.min.js'%}"></script>
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/renderCategory.js'%}"></script>
+  <script src="{% static 'js/renderCatalog.js'%}"></script>
+  <script src="{% static 'js/populateOrderWindow.js'%}" type="module"></script>
+  <script src="{% static 'js/numpad.js'%}"></script>
+  <script src="{% static 'js/addProductToOrder.js'%}" type="module"></script>
+  <script src="{% static 'js/completeOrder.js'%}" type="module"></script>
+</html>

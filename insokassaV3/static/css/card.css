@@ -1,0 +1,82 @@
+.main-catalog{
+    flex: 6;
+}
+
+.display-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.card{
+    border: 3px solid var(--inso-dark-blue);
+    border-radius: 5%;
+    background-color:#e6e6fa;
+}
+
+.card-image{
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.card-image img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-info{
+    margin-top: 3%;
+    padding-left: 1rem;
+}
+
+.card-title{
+    margin: 0;
+}
+
+.price, .price-stuff{
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.price-stuff{
+    color: var(--inso-green);
+}
+
+.card-button-group{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 0;
+    display: flex;
+}
+
+.card-button{
+    font-family: NTSomic-Regular;
+    background-color: var(--inso-light-blue);
+    cursor: pointer;
+    border: 0;
+    font-size: 18px;
+    flex:1;
+    text-align: center;
+}
+
+.card-button:hover{
+    scale: 1.05;
+    background-color: var(--inso-dark-blue);
+}
+
+.card-button:first-child {
+    border-radius: 10% 0% 0% 10%;
+}
+
+.card-button:last-child {
+    border-radius: 0% 10% 10% 0%;
+}

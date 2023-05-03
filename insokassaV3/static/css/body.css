@@ -1,0 +1,44 @@
+:root{
+    --inso-black: #000;
+    --inso-white: #fff;
+    --inso-green: #44cf6c;
+    --inso-light-blue: #197BBD;
+    --inso-dark-blue: #125E8A;
+}
+
+@font-face {
+    font-family: "NTSomic-Regular";
+    src: url(/static/fonts/NTSomic-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "NTSomic-Medium";
+    src: url(/static/fonts/NTSomic-Medium.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "NTSomic-Bold";
+    src: url(/static/fonts/NTSomic-Bold.woff2) format("woff2");
+}
+
+a, p, h1, h2, h3, h4, h5, ul, li, button, tr, td, input{
+    font-family: NTSomic-Regular
+}
+
+b{
+    font-family: NTSomic-Bold
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
+    padding-top: 5%;
+}
+
+.elem-title{
+    margin-left: 1.5rem;
+}

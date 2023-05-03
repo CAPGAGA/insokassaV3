@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory Page</title>
+    <link rel="stylesheet" href="{% static 'css/body.css'%}">
+    <link rel="stylesheet" href="{% static 'css/inventory.css'%}">
+    <link rel="stylesheet" href="{% static 'css/card.css'%}">
+</head>
+<body>
+  <div class="inventory-control-buttons">
+    <button class="inventory-button" id="inventory-settings">
+      Редактирование инвентаря
+    </button>
+    <button class="inventory-button" id="render-inventory">
+      Сводная информация
+    </button>
+    <a class="inventory-button" href="{% url 'index' %}">
+      В кассу
+    </a>
+  </div>
+<!--  Table placeholder-->
+<!--  <table class="info-table">-->
+<!--    <tr>-->
+<!--      <th>Название</th>-->
+<!--      <th>Цена (гости/наши)</th>-->
+<!--      <th>Категория</th>-->
+<!--      <th>Владелец</th>-->
+<!--      <th>Размер</th>-->
+<!--      <th>Наличие</th>-->
+<!--      <th>Продано</th>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--  <div class="working-wrapper">-->
+<!--    <table class="models-list">-->
+<!--      <tr>-->
+<!--        <td>-->
+<!--          <button class="models-button" id="category">-->
+<!--            Категории-->
+<!--          </button>-->
+<!--        </td>-->
+<!--        <td><button class="plus-button" id="add-category"><img src="{% static 'icons/plus-big.svg' %}"></button></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>-->
+<!--          <button class="models-button" id="owners">-->
+<!--            Поставщики-->
+<!--          </button>-->
+<!--        </td>-->
+<!--        <td><button class="plus-button" id="add-owner"><img src="{% static 'icons/plus-big.svg' %}"></button></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>-->
+<!--          <button class="models-button" id="sizes">-->
+<!--            Размеры-->
+<!--          </button>-->
+<!--        </td>-->
+<!--        <td><button class="plus-button" id="add-size"><img src="{% static 'icons/plus-big.svg' %}"></button></td>-->
+<!--      <tr>-->
+<!--        <td>-->
+<!--          <button class="models-button" id="products">-->
+<!--            Продукты-->
+<!--          </button>-->
+<!--        </td>-->
+<!--        <td><button class="plus-button" id="add-product"><img src="{% static 'icons/plus-big.svg' %}"></button></td>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--    <div class="working-panel">-->
+<!--      <table class="items-table">-->
+<!--&lt;!&ndash;        <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;          <td>Категория</td>&ndash;&gt;-->
+<!--&lt;!&ndash;          <td><img src="{% static 'icons/wrench.svg' %}"></td>&ndash;&gt;-->
+<!--&lt;!&ndash;          <td><img src="{% static 'icons/plus-big.svg' %}"></td>&ndash;&gt;-->
+<!--&lt;!&ndash;        </tr>&ndash;&gt;-->
+<!--      </table>-->
+<!--      <form class="form">-->
+<!--        <input placeholder="Категория" class="input" type="text">-->
+<!--        <button type="submit" class="input">Добавить</button>-->
+<!--      </div>-->
+<!--      <div class="form">-->
+<!--        <input placeholder="Размер" class="input" name="text" type="text">-->
+<!--        <button type="submit" class="input">Добавить</button>-->
+<!--      </div>-->
+<!--      <div class="form">-->
+<!--        <input placeholder="Поставщик" class="input" name="text" type="text">-->
+<!--        <button type="submit" class="input">Добавить</button>-->
+<!--      </div>-->
+<!--      <div class="form">-->
+<!--        <input placeholder="Название товара" class="input" type="text">-->
+<!--        <input placeholder="Цена для гостей" class="input" type="text">-->
+<!--        <input placeholder="Цена для своих" class="input" type="text">-->
+<!--        <select class="input" >-->
+<!--          <option value="1">1</option>-->
+<!--          <option value="2">2</option>-->
+<!--          <option value="3">3</option>-->
+<!--          <option value="4">4</option>-->
+<!--        </select>-->
+<!--        <select class="input" >-->
+<!--          <option value="1">1</option>-->
+<!--          <option value="2">2</option>-->
+<!--          <option value="3">3</option>-->
+<!--          <option value="4">4</option>-->
+<!--        </select>-->
+<!--        <input placeholder="Изображение" class="input" name="text" type="file">-->
+<!--        <div class="radio-group">-->
+<!--          <input type="radio" class="input radio">XXS-->
+<!--          <input type="radio" class="input">XS-->
+<!--          <input type="radio" class="input">S-->
+<!--          <input type="radio" class="input">M-->
+<!--          <input type="radio" class="input">XXS-->
+<!--        </div>-->
+<!--        <button type="submit" class="input">Добавить</button>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+</body>
+<script src="{% static 'js/jquery-3.6.1.min.js'%}"></script>
+<script src="{% static 'js/inventory.js'%}" type="module"></script>
+</html>

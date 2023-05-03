@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+    }
+
+.control-button{
+    background: var(--inso-white);
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 7px;
+    text-decoration: none;
+    color: var(--inso-black);
+}
+
+.control-button:hover{
+    text-decoration: underline;
+}
