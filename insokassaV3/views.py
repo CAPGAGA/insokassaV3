@@ -6,5 +6,8 @@ def index(request):
 def inventory(request):
     return render(request, 'inventory.html', {})
 
+def inkass(request):
+    return render(request, 'inkass.html', {})
+
 def game(request):
     return render(request, 'game.html', {})

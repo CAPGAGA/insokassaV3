@@ -10,4 +10,5 @@ urlpatterns = [
     path('inventory', views.inventory, name='inventory'),
     path('game', views.game, name='game'),
     path('api/', include('api.urls')),
+    path('inkass', views.inkass, name='inkass'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

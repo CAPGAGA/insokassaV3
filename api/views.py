@@ -100,7 +100,7 @@ def modifySize(request):
         size.delete()
         return Response(status=status.HTTP_200_OK)
 
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'POST', 'PUT'])
 def getProductOwner(request):
     if request.method == 'POST':
         owner_id = request.data['id']
@@ -111,6 +111,14 @@ def getProductOwner(request):
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'PUT':
+        owner_id = request.data['id']
+        money_input = request.data['input']
+
+        owner = models.ProductOwner.objects.get(pk=owner_id)
+        owner.balance -= int(money_input)
+        owner.save()
+        return Response(status=status.HTTP_200_OK)
     else:
         owner_name = models.ProductOwner.objects.all()
         serializer = ProductOwnerSerializer(owner_name, many=True)
