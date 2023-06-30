@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/app/insokassaV3/insokassaV3/static
+    networks:
+      - django-network
+    expose:
+      - 8000
+    command: gunicorn -w 4 insokassaV3.wsgi:application  --bind 0.0.0.0:8000
+    restart: always
+  nginx:
+    build:
+      context: ./build/nginx
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/app/insokassaV3/insokassaV3/static
+    ports:
+      - "1337:80"
+    networks:
+      - django-network
+    depends_on:
+      - web
+    restart: always
+
+volumes:
+  static_volume:
+networks:
+  django-network:

@@ -49,7 +49,7 @@ $(document).on('click', '#submit', function(e){
             body: JSON.stringify({"id": owner_id, "input": input})
         })
     .then((response) => {
-        return response.json()
+//        return response.json()
     })
     .then((data) => {
         console.log(data)

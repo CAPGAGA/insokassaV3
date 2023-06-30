@@ -41,7 +41,7 @@ def modifyCategory(request):
 
     elif request.method == 'PUT':
         value = request.data['category']
-        category, created = models.ProductCategory.get_or_create(category=value)
+        category, created = models.ProductCategory.objects.get_or_create(category=value)
         category.save()
         return Response(status=status.HTTP_200_OK)
 
